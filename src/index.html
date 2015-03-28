@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RainSaucer Estimator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+            <h1 class="title-header">RainSaucer Estimate</h1>
+            <div class="instructions">
+                <p>Instructions: enter the number of RainSaucers or other Surface to get your rainwater collection Potential. Pick your nearest major City (using the dropown box) to calculate approximate total collection per Year.</p>
+            </div>
+            <div class="rain-saucer-selector">
+                <div class="row">
+                    <div class="large-4 columns">
+                      <label>48" RainSaucer
+                        <input type="number" placeholder="Quantity" />
+                      </label>
+                    </div>
+                    <div class="large-4 columns">
+                      <label>59" RainSaucer
+                        <input type="number" placeholder="Quantity" />
+                      </label>
+                    </div>
+                    <div class="large-4 columns">
+                      <label>84" RainSaucer
+                        <input type="number" placeholder="Quantity" />
+                      </label> 
+                    </div>
+                </div>
+                <div class="gallons-per-inch">
+                    <h3>Gallons of Rain Collected (per inch of rainfall)<span class="rain-potential"></span></h3>
+                </div>
+            </div>
+            <div class="city-selector">
+                <div class="row">
+                    <div class="large-12 columns">
+                      <label>Select Box
+                        <select>
+                          <option value="">Select Major US City</option>
+                        </select>
+                      </label>
+                    </div>
+                </div>
+            </div>
+            <div class="results">
+                <h3>Gallons Collected of Rain per Year <span class="rain-collected"></span></h3>
+            </div>
+        </div>
+    </body>
+</html>
