@@ -2,12 +2,12 @@
 	var $cityOptions = $('.city-options');
 	var $rainSaucers = $('.rainSaucer');
 	var $rainPotential = $('.rain-potential');
-	var $averageRainfall = $('average-rainfall');
+	var $averageRainfall = $('.average-rainfall');
 	var $rainfallCapture = $('.rain-collected');
 
 	$.getJSON('js/rainfallByCity.json', function(rainfallData){
 		for (var i=0; i<rainfallData.length; i++){
-			$cityOptions.append(generateCityDropdownOption(rainfallData[i]))
+			$cityOptions.append(generateCityDropdownOption(rainfallData[i]));
 		}
 	});
 
@@ -31,11 +31,11 @@
 	};
 
 	var renderRainPotential = function(n){
-		$rainPotential.html(n);
+		$rainPotential.html(n.toFixed(2));
 	};
 
 	var renderRainfallCapture = function(n){
-		$rainfallCapture.html(n);
+		$rainfallCapture.html(n.toFixed(2));
 	};
 
 	var renderAverageRainfall = function(n){
@@ -45,17 +45,17 @@
 	var calculateRainfallCapture = function(){
 		var rainPotential = +($rainPotential.html());
 		var averageRainfall = +($averageRainfall.html());
-		console.log($averageRainfall);
 		return rainPotential * averageRainfall;
 	}
 
 	$rainSaucers.on('input', function(){
-		calculateRainSaucerCapacity();	
+		calculateRainSaucerCapacity();
+		var rainfallCapture = calculateRainfallCapture();
+		renderRainfallCapture(rainfallCapture);	
 	});
 
 	$cityOptions.on('change', function(){
-		console.log(this);
-		console.log(averageRainfall);
+		var averageRainfall = $(this).val();
 		renderAverageRainfall(averageRainfall);
 		var rainfallCapture = calculateRainfallCapture();
 		renderRainfallCapture(rainfallCapture);
