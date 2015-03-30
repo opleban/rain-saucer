@@ -1,0 +1,29 @@
+{
+  "name": "Rain-Saucer",
+  "version": "0.0.1",
+  "description": "Rain Saucer Calculator ",
+  "main": "package.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-cache": "^0.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-cssimport": "^1.2.2",
+    "gulp-debug": "^0.3.0",
+    "gulp-insert": "^0.4.0",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.3.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-entity-convert": "^0.0.1"
+  }
+}

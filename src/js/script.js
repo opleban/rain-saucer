@@ -5,7 +5,7 @@
 	var $averageRainfall = $('.average-rainfall');
 	var $rainfallCapture = $('.rain-collected');
 
-	$.getJSON('js/rainfallByCity.json', function(rainfallData){
+	$.getJSON('data/rainfallByCity.json', function(rainfallData){
 		for (var i=0; i<rainfallData.length; i++){
 			$cityOptions.append(generateCityDropdownOption(rainfallData[i]));
 		}
