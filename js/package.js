@@ -48,6 +48,7 @@
 	var $rainPotential = $('.rain-potential');
 	var $averageRainfall = $('.average-rainfall');
 	var $rainfallCapturePotential = $('.rain-collected');
+	var $gallonBarrels = $('#gallon-barrels');
 
 	$.getJSON('data/rainfallByCity.json', function(rainfallData){
 		for (var i=0; i<rainfallData.length; i++){
@@ -92,10 +93,24 @@
 		return rainPotential * averageRainfall;
 	}
 
+	var calculateBarrelsFilled = function(rainfallCapture){
+		if (rainfallCapture > 0){
+			return 55/rainfallCapture;
+		} else {
+			return 0;
+		}
+
+	}
+
+	var renderBarrelsFilled = function(n){
+		$gallonBarrels.html(n.toFixed(2));
+	}
+
 	$rainSaucers.on('input', function(){
 		calculateRainSaucerCapacity();
 		var rainfallCapturePotential = calculateRainfallCapturePotential();
-		renderRainfallCapturePotential(rainfallCapturePotential);	
+		renderRainfallCapturePotential(rainfallCapturePotential);
+		renderBarrelsFilled(calculateBarresFilled(rainfallCapturePotential));	
 	});
 
 	$cityOptions.on('change', function(){
