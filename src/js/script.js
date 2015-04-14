@@ -65,7 +65,7 @@
 	$rainSaucers.on('input', function(){
 		calculateRainSaucerCapacity();
 		var rainfallCapture = calculateRainfallCapturePotential();
-		renderRainfallCapturePotential(rainfallCapturePotential);
+		renderRainfallCapturePotential(rainfallCapture);
 		var barrelsFilled = calculateBarrelsFilled(rainfallCapture)
 		renderBarrelsFilled(barrelsFilled);	
 	});
