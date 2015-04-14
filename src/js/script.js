@@ -65,7 +65,10 @@
 	}
 
 	var renderBarrelsFilled = function(n){
-		$gallonBarrels.html(n.toFixed(2));
+		if(n > 0){
+			n = n.toFixed(2);
+		}
+		$gallonBarrels.html(n);
 	}
 
 	$rainSaucers.on('input', function(){
