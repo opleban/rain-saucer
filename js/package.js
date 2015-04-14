@@ -96,7 +96,6 @@
 		calculateRainSaucerCapacity();
 		var rainfallCapturePotential = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapturePotential);	
-		renderOtherSurface
 	});
 
 	$cityOptions.on('change', function(){
