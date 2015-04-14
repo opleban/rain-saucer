@@ -64,9 +64,9 @@
 
 	$rainSaucers.on('input', function(){
 		calculateRainSaucerCapacity();
-		var rainfallCapturePotential = calculateRainfallCapturePotential();
+		var rainfallCapture = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapturePotential);
-		var barrelsFilled = calculateBarrelsFilled(rainfallCapturePotential)
+		var barrelsFilled = calculateBarrelsFilled(rainfallCapture)
 		renderBarrelsFilled(barrelsFilled);	
 	});
 
@@ -75,7 +75,7 @@
 		renderAverageRainfall(averageRainfall);
 		var rainfallCapture = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapture);
-		var barrelsFilled = calculateBarrelsFilled(rainfallCapturePotential)
+		var barrelsFilled = calculateBarrelsFilled(rainfallCapture)
 		renderBarrelsFilled(barrelsFilled);	
 	});
 
