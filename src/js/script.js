@@ -22,7 +22,7 @@
 	}
 
 	var calculateRainSaucerCapacity = function(){
-		var totalRainsaucerCapicity = 0;
+		var totalRainsaucerCapacity = 0;
 		for(var i=0; i<$rainSaucers.length; i++){
 			var rainsaucer = $rainSaucers[i]
 			var captureRate = +$(rainsaucer).attr('data-capacity');
@@ -52,7 +52,7 @@
 	var calculateOtherSurfaceAreaCapturePotential = function(){
 		var otherSurfaceArea = $otherSurfaceArea.value();
 		var captureRate = +$($otherSurfaceArea.attr('data-capacity'));
-		var rainCapturePotential = $otherSurfaceArea.value * captureRate
+		var rainCapturePotential = $otherSurfaceArea.value * captureRate;
 	}
 
 	$rainSaucers.on('input', function(){
