@@ -32,10 +32,16 @@
 	};
 
 	var renderRainCapacity = function(n){
+		if(n > 0){
+			n = n.toFixed(2);
+		}
 		$rainPotential.html(n.toFixed(2));
 	};
 
 	var renderRainfallCapturePotential = function(n){
+		if(n > 0){
+			n = n.toFixed(2);
+		}
 		$rainfallCapturePotential.html(n.toFixed(2));
 	};
 
