@@ -80,7 +80,7 @@
 	};
 
 	var renderRainfallCapturePotential = function(n){
-		$rainfallCapture.html(n.toFixed(2));
+		$rainfallCapturePotential.html(n.toFixed(2));
 	};
 
 	var renderAverageRainfall = function(n){
