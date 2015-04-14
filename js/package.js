@@ -101,7 +101,7 @@
 
 	$rainSaucers.on('input', function(){
 		calculateRainSaucerCapacity();
-		var rainfallCapture = calculateRainfallCapturePotential();
+		var rainfallCapturePotential = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapturePotential);	
 	});
 
