@@ -94,8 +94,8 @@
 	}
 
 	var calculateBarrelsFilled = function(rainfallCapture){
-		if (rainfallCapture > 0){
-			return 55/rainfallCapture;
+		if (rainfallCapture <= 0){
+			return rainfallCapture/55;
 		} else {
 			return 0;
 		}
