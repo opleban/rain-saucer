@@ -50,7 +50,7 @@
 	}
 
 	var calculateBarrelsFilled = function(rainfallCapture){
-		if (rainfallCapture <= 0){
+		if (rainfallCapture > 0){
 			return rainfallCapture/55;
 		} else {
 			return 0;
@@ -66,7 +66,8 @@
 		calculateRainSaucerCapacity();
 		var rainfallCapturePotential = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapturePotential);
-		renderBarrelsFilled(calculateBarrelsFilled(rainfallCapturePotential));	
+		var barrelsFilled = calculateBarrelsFilled(rainfallCapturePotential)
+		renderBarrelsFilled(barrelsFilled);	
 	});
 
 	$cityOptions.on('change', function(){
@@ -74,6 +75,8 @@
 		renderAverageRainfall(averageRainfall);
 		var rainfallCapture = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapture);
+		var barrelsFilled = calculateBarrelsFilled(rainfallCapturePotential)
+		renderBarrelsFilled(barrelsFilled);	
 	});
 
 
