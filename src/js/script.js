@@ -4,7 +4,6 @@
 	var $rainPotential = $('.rain-potential');
 	var $averageRainfall = $('.average-rainfall');
 	var $rainfallCapturePotential = $('.rain-collected');
-	var $otherSurfaceArea = $('custom-surface-area');
 
 	$.getJSON('data/rainfallByCity.json', function(rainfallData){
 		for (var i=0; i<rainfallData.length; i++){
@@ -49,16 +48,11 @@
 		return rainPotential * averageRainfall;
 	}
 
-	var calculateOtherSurfaceAreaCapturePotential = function(){
-		var otherSurfaceArea = $otherSurfaceArea.value();
-		var captureRate = +$($otherSurfaceArea.attr('data-capacity'));
-		var rainCapturePotential = $otherSurfaceArea.value * captureRate;
-	}
-
 	$rainSaucers.on('input', function(){
 		calculateRainSaucerCapacity();
 		var rainfallCapturePotential = calculateRainfallCapturePotential();
 		renderRainfallCapturePotential(rainfallCapturePotential);	
+		renderOtherSurface
 	});
 
 	$cityOptions.on('change', function(){
