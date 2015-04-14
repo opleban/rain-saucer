@@ -101,8 +101,8 @@
 	$cityOptions.on('change', function(){
 		var averageRainfall = $(this).val();
 		renderAverageRainfall(averageRainfall);
-		var rainfallCapture = calculateRainfallCapture();
-		renderRainfallCapture(rainfallCapture);
+		var rainfallCapture = calculateRainfallCapturePotential();
+		renderRainfallCapturePotential(rainfallCapture);
 	});
 
 
