@@ -6940,3 +6940,11 @@ body {
 
 .city-selector {
   padding: 20px 0 10px; }
+
+.barrel-span {
+  font-style: italic;
+  font-size: 1.4em;
+  font-weight: 200; }
+
+#gallon-barrel {
+  font-weight: 800; }
